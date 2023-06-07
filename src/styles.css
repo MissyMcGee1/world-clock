@@ -1,4 +1,11 @@
 body {
-  text-align: center;
   background: #e1d9f8;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
 }
