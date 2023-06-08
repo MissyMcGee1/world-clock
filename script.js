@@ -1,26 +1,3 @@
-//****Wrote code based on what was taught in class****//
-// Christchurch
-// let christchurchElement = document.querySelector("#christchurch");
-// let christchurchDateElement = christchurchElement.querySelector(".date");
-// let christchurchTimeElement = christchurchElement.querySelector(".time");
-// let christchurchTime = moment().tz("Pacific/Auckland");
-
-// christchurchDateElement.innerHTML = moment().format("MMMM Do YYYY");
-// christchurchTimeElement.innerHTML = christchurchTime.format(
-//   "h:mm:ss [<small>]A[</small>]"
-// );
-
-// Vancouver
-// let vancouverElement = document.querySelector("#vancouver");
-// let vancouverDateElement = vancouverElement.querySelector(".date");
-// let vancouverTimeElement = vancouverElement.querySelector(".time");
-// let vancouverTime = moment().tz("America/Vancouver");
-
-// vancouverDateElement.innerHTML = moment().format("MMMM Do YYYY");
-// vancouverTimeElement.innerHTML = vancouverTime.format(
-//   "h:mm:ss [<small>]A[</small>]"
-// );
-
 //****Improved code by researching and creating functions to call each city based on id****//
 //****Added interval function - possibly delete later****//
 function displayTime(cities) {
@@ -47,3 +24,27 @@ let cities = [
 ];
 
 displayTime(cities);
+
+function updateLocation(event) {
+  let locationTimeZone = event.target.value;
+  let locationName = locationTimeZone.split("/")[1];
+  let locationTime = moment().tz(locationTimeZone);
+  let locationElement = document.querySelector("#cities");
+  locationElement.innerHTML = `
+  
+  <div class="city">
+    <div>
+        <h2>${locationName}</h2>
+        <div class="date">${locationTime.format("MMMM Do YYYY")}</div>
+      </div>
+        <div class="time">${locationTime.format(
+          "h:mm:ss [<small>]A[</small>]"
+        )} </div>
+      </div>
+    </div>
+  `;
+}
+
+let locationSelectElement = document.querySelector("#location");
+
+locationSelectElement.addEventListener("change", updateLocation);
