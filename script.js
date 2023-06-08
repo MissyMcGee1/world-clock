@@ -45,6 +45,7 @@ function updateLocation(event) {
         )} </div>
       </div>
     </div>
+    <a href="/">All cities</a>
   `;
 }
 
