@@ -27,6 +27,9 @@ displayTime(cities);
 
 function updateLocation(event) {
   let locationTimeZone = event.target.value;
+  if (locationTimeZone === "current") {
+    locationTimeZone = moment.tz.guess();
+  }
   let locationName = locationTimeZone.split("/")[1];
   let locationTime = moment().tz(locationTimeZone);
   let locationElement = document.querySelector("#cities");
