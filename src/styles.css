@@ -60,3 +60,17 @@ footer {
   vertical-align: middle;
   line-height: 36px;
 }
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .time {
+    font-size: 30px;
+  }
+}
