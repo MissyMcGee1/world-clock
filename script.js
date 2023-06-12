@@ -1,5 +1,3 @@
-//****Improved code by researching and creating functions to call each city based on id****//
-//****Added interval function - possibly delete later****//
 function displayTime(cities) {
   cities.forEach((city) => {
     let cityElement = document.querySelector(`#${city.id}`);
@@ -45,7 +43,9 @@ function updateLocation(event) {
         )} </div>
       </div>
     </div>
+    <div class="all-cities">
     <a href="/">All cities</a>
+    </div>
   `;
 }
 

@@ -1,10 +1,17 @@
 body {
-  background: #f3f1f8;
+  background-image: url("../images/content-bg-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Manrope", sans-serif;
 }
 
 h1 {
+  font-size: 52px;
   text-align: center;
+  padding-top: 70px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 h2 {
@@ -13,37 +20,57 @@ h2 {
 }
 
 select {
+  color: #ffffff;
+  font-size: 14px;
   display: block;
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+  background: transparent;
+}
+
+option {
+  color: #000000;
 }
 
 footer {
+  color: #ffffff;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
+}
+
+footer a {
+  color: #ffffff;
 }
 
 .container {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 60px auto 0;
   background: #ffffff;
-  padding: 30px;
   border-radius: 8px;
-  border: 1px solid #e4def3;
-  box-shadow: 8px 8px 8px rgb(204, 190, 240);
+}
+
+.hero {
+  background-image: url("../images/hero-bg-image.jpg");
+  margin: 0 auto;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 230px;
 }
 
 .city {
   display: flex;
   margin: 20px 0;
   justify-content: space-between;
-  padding: 30px 0;
-  border-bottom: 1px solid #bfaaf7;
+  padding: 10px 30px 30px;
+  border-bottom: 1px solid #322fa8;
 }
 
 .city:last-child {
   border: none;
+  padding-bottom: 40px;
 }
 
 .date {
@@ -59,6 +86,15 @@ footer {
   font-size: 18px;
   vertical-align: middle;
   line-height: 36px;
+}
+
+.all-cities {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.all-cities a {
+  color: #322fa8;
 }
 
 @media (max-width: 767px) {
