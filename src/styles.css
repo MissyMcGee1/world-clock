@@ -1,7 +1,13 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("../images/content-bg-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
   font-family: "Manrope", sans-serif;
 }
 
@@ -104,6 +110,10 @@ footer a {
 
   footer p {
     font-size: 14px;
+  }
+
+  .container {
+    margin: 60px auto;
   }
 
   .time {
